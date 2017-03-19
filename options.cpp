@@ -2,7 +2,7 @@
 #include "ui_options.h"
 #include "mainwindow.h"
 #include "definitions.h"
-#include <QtGui>
+
 #include <QStyleFactory>
 #include <QStyle>
 #include <QFileDialog>
@@ -12,12 +12,10 @@ Options::Options(QWidget *parent) :
     ui(new Ui::Options)
 {
     ui->setupUi(this);
-    this->setFixedSize(this->width(), this->height());
-    this->setWindowModality(Qt::WindowModal);
     QSettings settings(ORGNAME, APPNAME);
     settings.beginGroup("QtLuaPad");
     int view = settings.value("mdiview").toInt();
-    ui->programmer->setText(settings.value("programmer").toString().toLatin1());
+    ui->programmer->setText(settings.value("programmer").toString().toUtf8());
     ui->cbWrap->setChecked(settings.value("wrap").toBool());
     ui->cbCodeFolding->setChecked(settings.value("folding").toBool());
     ui->cbBraceMatch->setChecked(settings.value("bracematch").toBool());

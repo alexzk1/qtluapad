@@ -53,7 +53,7 @@ void LuaEditor::initLexer()
     QSettings settings(ORGNAME, APPNAME);
     settings.beginGroup("QtLuaPad");
     bool autoComp = settings.value("autocompletion").toBool();
-    QString funcFile = settings.value("funcfile").toString().toLatin1();
+    QString funcFile = settings.value("funcfile").toString().toUtf8();
     settings.endGroup();
 
     if(autoComp)

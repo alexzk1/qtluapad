@@ -10,6 +10,7 @@
 #include <QMdiSubWindow>
 #include <QInputDialog>
 #include <algorithm>
+#include <QStatusBar>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle(APPNAME);
     QLabel *label = new QLabel;
     label->setText(QDate::currentDate().toString());
-    ui->statusBar->addPermanentWidget(label);
+    statusBar()->addPermanentWidget(label);
     mdi = new QMdiArea(this);
     this->setCentralWidget(mdi);
     this->setWindowIcon(QIcon(":/winicon.png"));

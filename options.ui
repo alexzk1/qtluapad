@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>Options</class>
  <widget class="QDialog" name="Options">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>345</width>
-    <height>211</height>
+    <width>478</width>
+    <height>265</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,352 +20,208 @@
    <iconset resource="icons/res_icon.qrc">
     <normaloff>:/winicon.png</normaloff>:/winicon.png</iconset>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>180</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Okay</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>180</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cancel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>8</x>
-     <y>62</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>MDI View Type:</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="rdTabbedView">
-   <property name="geometry">
-    <rect>
-     <x>88</x>
-     <y>52</y>
-     <width>82</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Tabbed View</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="rdWindowedView">
-   <property name="geometry">
-    <rect>
-     <x>88</x>
-     <y>72</y>
-     <width>101</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Windowed View</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>98</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="Line" name="line_2">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>42</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>8</x>
-     <y>12</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Programmer:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="programmer">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>11</y>
-     <width>101</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="cbWrap">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>112</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Enable Word-Wrap Code</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line_3">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>142</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="Line" name="line_4">
-   <property name="geometry">
-    <rect>
-     <x>186</x>
-     <y>12</y>
-     <width>16</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>153</y>
-     <width>61</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Tab Width:</string>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="spinTab">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>150</y>
-     <width>42</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="maximum">
-    <number>20</number>
-   </property>
-  </widget>
-  <widget class="Line" name="line_5">
-   <property name="geometry">
-    <rect>
-     <x>207</x>
-     <y>80</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="cbBraceMatch">
-   <property name="geometry">
-    <rect>
-     <x>207</x>
-     <y>90</y>
-     <width>121</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Enable Brace Match</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line_6">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>113</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="cbCodeFolding">
-   <property name="geometry">
-    <rect>
-     <x>207</x>
-     <y>123</y>
-     <width>121</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Enable Code Folding</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line_7">
-   <property name="geometry">
-    <rect>
-     <x>207</x>
-     <y>150</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>160</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Application Style:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboStyle">
-   <property name="geometry">
-    <rect>
-     <x>209</x>
-     <y>180</y>
-     <width>121</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Windows</string>
-    </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Programmer:</string>
+     </property>
+    </widget>
    </item>
-   <item>
-    <property name="text">
-     <string>WindowsXP</string>
-    </property>
+   <item row="0" column="1" colspan="3">
+    <widget class="QLineEdit" name="programmer"/>
    </item>
-   <item>
-    <property name="text">
-     <string>WindowsVista</string>
-    </property>
+   <item row="0" column="4" rowspan="3">
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
    </item>
-   <item>
-    <property name="text">
-     <string>Plastique</string>
-    </property>
+   <item row="0" column="5" colspan="2">
+    <widget class="QCheckBox" name="cbAutoComplete">
+     <property name="text">
+      <string>Enable Auto-Completion</string>
+     </property>
+    </widget>
    </item>
-   <item>
-    <property name="text">
-     <string>Cleanlooks</string>
-    </property>
+   <item row="1" column="0" colspan="4">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
    </item>
-   <item>
-    <property name="text">
-     <string>Motif</string>
-    </property>
+   <item row="1" column="5" colspan="2">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Functions File:</string>
+     </property>
+    </widget>
    </item>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>205</x>
-     <y>30</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Functions File:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="funcFile">
-   <property name="geometry">
-    <rect>
-     <x>205</x>
-     <y>50</y>
-     <width>105</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="browseBtn">
-   <property name="geometry">
-    <rect>
-     <x>315</x>
-     <y>50</y>
-     <width>25</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="cbAutoComplete">
-   <property name="geometry">
-    <rect>
-     <x>205</x>
-     <y>10</y>
-     <width>139</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Enable Auto-Completion</string>
-   </property>
-  </widget>
+   <item row="2" column="0" rowspan="2" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>MDI View Type:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="2">
+    <widget class="QRadioButton" name="rdTabbedView">
+     <property name="text">
+      <string>Tabbed View</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="5">
+    <widget class="QLineEdit" name="funcFile"/>
+   </item>
+   <item row="2" column="6">
+    <widget class="QToolButton" name="browseBtn">
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" rowspan="2" colspan="3">
+    <widget class="QRadioButton" name="rdWindowedView">
+     <property name="text">
+      <string>Windowed View</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5" colspan="2">
+    <widget class="Line" name="line_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="4">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="5" colspan="2">
+    <widget class="QCheckBox" name="cbBraceMatch">
+     <property name="text">
+      <string>Enable Brace Match</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" rowspan="2" colspan="4">
+    <widget class="QCheckBox" name="cbWrap">
+     <property name="text">
+      <string>Enable Word-Wrap Code</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="5" colspan="2">
+    <widget class="Line" name="line_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="5" colspan="2">
+    <widget class="QCheckBox" name="cbCodeFolding">
+     <property name="text">
+      <string>Enable Code Folding</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="4">
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="3" rowspan="2">
+    <widget class="QSpinBox" name="spinTab">
+     <property name="maximum">
+      <number>20</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="5" colspan="2">
+    <widget class="Line" name="line_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="3">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Tab Width:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="5" colspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Application Style:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="3">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Okay</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="3">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="5" colspan="2">
+    <widget class="QComboBox" name="comboStyle">
+     <item>
+      <property name="text">
+       <string>Windows</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WindowsXP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WindowsVista</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Plastique</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cleanlooks</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Motif</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources>
   <include location="icons/res_icon.qrc"/>
