@@ -11,18 +11,18 @@
 #define UI_FINDDIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QDialog>
-#include <QtGui/QFrame>
-#include <QtGui/QGroupBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QRadioButton>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -121,20 +121,20 @@ public:
 
     void retranslateUi(QDialog *FindDialog)
     {
-        FindDialog->setWindowTitle(QApplication::translate("FindDialog", "Find Text", 0, QApplication::UnicodeUTF8));
-        groupBox->setTitle(QApplication::translate("FindDialog", "Text Search", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("FindDialog", "Cancel", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("FindDialog", "Text to Find:", 0, QApplication::UnicodeUTF8));
-        rdUp->setText(QApplication::translate("FindDialog", "Search Up", 0, QApplication::UnicodeUTF8));
-        cbWholeWords->setText(QApplication::translate("FindDialog", "Whole Words", 0, QApplication::UnicodeUTF8));
-        rdDown->setText(QApplication::translate("FindDialog", "Search Down", 0, QApplication::UnicodeUTF8));
-        cbCaseSensitive->setText(QApplication::translate("FindDialog", "Case Sensitive", 0, QApplication::UnicodeUTF8));
-        findNext->setText(QApplication::translate("FindDialog", "Find Next", 0, QApplication::UnicodeUTF8));
-        groupBox_2->setTitle(QApplication::translate("FindDialog", "Search && Replace", 0, QApplication::UnicodeUTF8));
-        replaceAll->setText(QApplication::translate("FindDialog", "Replace All", 0, QApplication::UnicodeUTF8));
-        goReplace->setText(QApplication::translate("FindDialog", "Replace", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("FindDialog", "With:", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("FindDialog", "Replace:", 0, QApplication::UnicodeUTF8));
+        FindDialog->setWindowTitle(QApplication::translate("FindDialog", "Find Text", 0));
+        groupBox->setTitle(QApplication::translate("FindDialog", "Text Search", 0));
+        pushButton->setText(QApplication::translate("FindDialog", "Cancel", 0));
+        label->setText(QApplication::translate("FindDialog", "Text to Find:", 0));
+        rdUp->setText(QApplication::translate("FindDialog", "Search Up", 0));
+        cbWholeWords->setText(QApplication::translate("FindDialog", "Whole Words", 0));
+        rdDown->setText(QApplication::translate("FindDialog", "Search Down", 0));
+        cbCaseSensitive->setText(QApplication::translate("FindDialog", "Case Sensitive", 0));
+        findNext->setText(QApplication::translate("FindDialog", "Find Next", 0));
+        groupBox_2->setTitle(QApplication::translate("FindDialog", "Search && Replace", 0));
+        replaceAll->setText(QApplication::translate("FindDialog", "Replace All", 0));
+        goReplace->setText(QApplication::translate("FindDialog", "Replace", 0));
+        label_2->setText(QApplication::translate("FindDialog", "With:", 0));
+        label_3->setText(QApplication::translate("FindDialog", "Replace:", 0));
     } // retranslateUi
 
 };

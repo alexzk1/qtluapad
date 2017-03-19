@@ -4,11 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network widgets
 
 TARGET = QtLuaPad
 TEMPLATE = app
 
+include($$PWD/pugixml/pugi.pri)
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -32,7 +33,7 @@ FORMS    += mainwindow.ui \
     about.ui \
     questcreator.ui
 
-LIBS += qscintilla2.lib xml2.lib
+LIBS += -lqscintilla2_qt5
 
 RESOURCES += \
     icons/res_icon.qrc

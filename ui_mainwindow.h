@@ -11,16 +11,16 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QHeaderView>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -261,58 +261,58 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
-        actionNew->setText(QApplication::translate("MainWindow", "New", 0, QApplication::UnicodeUTF8));
-        actionNew->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0, QApplication::UnicodeUTF8));
-        actionOpen->setText(QApplication::translate("MainWindow", "Open", 0, QApplication::UnicodeUTF8));
-        actionOpen->setShortcut(QApplication::translate("MainWindow", "Ctrl+O", 0, QApplication::UnicodeUTF8));
-        actionSave->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
-        actionSave->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0, QApplication::UnicodeUTF8));
-        actionSave_As->setText(QApplication::translate("MainWindow", "Save As...", 0, QApplication::UnicodeUTF8));
-        actionPrint->setText(QApplication::translate("MainWindow", "Print", 0, QApplication::UnicodeUTF8));
-        actionClose->setText(QApplication::translate("MainWindow", "Close", 0, QApplication::UnicodeUTF8));
-        actionClose->setShortcut(QApplication::translate("MainWindow", "Ctrl+W", 0, QApplication::UnicodeUTF8));
-        actionUndo->setText(QApplication::translate("MainWindow", "Undo", 0, QApplication::UnicodeUTF8));
-        actionUndo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", 0, QApplication::UnicodeUTF8));
-        actionRedo->setText(QApplication::translate("MainWindow", "Redo", 0, QApplication::UnicodeUTF8));
-        actionRedo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Y", 0, QApplication::UnicodeUTF8));
-        actionCut->setText(QApplication::translate("MainWindow", "Cut", 0, QApplication::UnicodeUTF8));
-        actionCut->setShortcut(QApplication::translate("MainWindow", "Ctrl+X", 0, QApplication::UnicodeUTF8));
-        actionCopy->setText(QApplication::translate("MainWindow", "Copy", 0, QApplication::UnicodeUTF8));
-        actionCopy->setShortcut(QApplication::translate("MainWindow", "Ctrl+C", 0, QApplication::UnicodeUTF8));
-        actionPaste->setText(QApplication::translate("MainWindow", "Paste", 0, QApplication::UnicodeUTF8));
-        actionPaste->setShortcut(QApplication::translate("MainWindow", "Ctrl+P", 0, QApplication::UnicodeUTF8));
-        actionDelete_Line->setText(QApplication::translate("MainWindow", "Delete Line", 0, QApplication::UnicodeUTF8));
-        actionDelete_Selected->setText(QApplication::translate("MainWindow", "Delete Selected", 0, QApplication::UnicodeUTF8));
-        actionDelete_Selected->setShortcut(QApplication::translate("MainWindow", "Ctrl+Del", 0, QApplication::UnicodeUTF8));
-        actionSelect_All->setText(QApplication::translate("MainWindow", "Select All", 0, QApplication::UnicodeUTF8));
-        actionSelect_All->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0, QApplication::UnicodeUTF8));
-        actionFind->setText(QApplication::translate("MainWindow", "Find", 0, QApplication::UnicodeUTF8));
-        actionFind->setShortcut(QApplication::translate("MainWindow", "Ctrl+F", 0, QApplication::UnicodeUTF8));
-        actionGoto_Line->setText(QApplication::translate("MainWindow", "Goto Line", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        actionNew->setText(QApplication::translate("MainWindow", "New", 0));
+        actionNew->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0));
+        actionOpen->setText(QApplication::translate("MainWindow", "Open", 0));
+        actionOpen->setShortcut(QApplication::translate("MainWindow", "Ctrl+O", 0));
+        actionSave->setText(QApplication::translate("MainWindow", "Save", 0));
+        actionSave->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0));
+        actionSave_As->setText(QApplication::translate("MainWindow", "Save As...", 0));
+        actionPrint->setText(QApplication::translate("MainWindow", "Print", 0));
+        actionClose->setText(QApplication::translate("MainWindow", "Close", 0));
+        actionClose->setShortcut(QApplication::translate("MainWindow", "Ctrl+W", 0));
+        actionUndo->setText(QApplication::translate("MainWindow", "Undo", 0));
+        actionUndo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", 0));
+        actionRedo->setText(QApplication::translate("MainWindow", "Redo", 0));
+        actionRedo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Y", 0));
+        actionCut->setText(QApplication::translate("MainWindow", "Cut", 0));
+        actionCut->setShortcut(QApplication::translate("MainWindow", "Ctrl+X", 0));
+        actionCopy->setText(QApplication::translate("MainWindow", "Copy", 0));
+        actionCopy->setShortcut(QApplication::translate("MainWindow", "Ctrl+C", 0));
+        actionPaste->setText(QApplication::translate("MainWindow", "Paste", 0));
+        actionPaste->setShortcut(QApplication::translate("MainWindow", "Ctrl+P", 0));
+        actionDelete_Line->setText(QApplication::translate("MainWindow", "Delete Line", 0));
+        actionDelete_Selected->setText(QApplication::translate("MainWindow", "Delete Selected", 0));
+        actionDelete_Selected->setShortcut(QApplication::translate("MainWindow", "Ctrl+Del", 0));
+        actionSelect_All->setText(QApplication::translate("MainWindow", "Select All", 0));
+        actionSelect_All->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0));
+        actionFind->setText(QApplication::translate("MainWindow", "Find", 0));
+        actionFind->setShortcut(QApplication::translate("MainWindow", "Ctrl+F", 0));
+        actionGoto_Line->setText(QApplication::translate("MainWindow", "Goto Line", 0));
 #ifndef QT_NO_TOOLTIP
-        actionGoto_Line->setToolTip(QApplication::translate("MainWindow", "Goto Line", 0, QApplication::UnicodeUTF8));
+        actionGoto_Line->setToolTip(QApplication::translate("MainWindow", "Goto Line", 0));
 #endif // QT_NO_TOOLTIP
-        actionGoto_Line->setShortcut(QApplication::translate("MainWindow", "Ctrl+G", 0, QApplication::UnicodeUTF8));
-        actionDebuger->setText(QApplication::translate("MainWindow", "Debuger", 0, QApplication::UnicodeUTF8));
-        actionDebuger->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0, QApplication::UnicodeUTF8));
-        actionOptions->setText(QApplication::translate("MainWindow", "Options", 0, QApplication::UnicodeUTF8));
-        actionOptions->setShortcut(QApplication::translate("MainWindow", "Shift+O", 0, QApplication::UnicodeUTF8));
-        actionQtLuaPad->setText(QApplication::translate("MainWindow", "About QtLuaPad", 0, QApplication::UnicodeUTF8));
-        actionQtLuaPad->setShortcut(QApplication::translate("MainWindow", "Ctrl+Q", 0, QApplication::UnicodeUTF8));
-        actionOtland->setText(QApplication::translate("MainWindow", "Otland", 0, QApplication::UnicodeUTF8));
-        actionOtland->setShortcut(QApplication::translate("MainWindow", "Ctrl+I", 0, QApplication::UnicodeUTF8));
-        actionQuest_Creator->setText(QApplication::translate("MainWindow", "Quest Creator", 0, QApplication::UnicodeUTF8));
-        actionDelirium->setText(QApplication::translate("MainWindow", "Delirium", 0, QApplication::UnicodeUTF8));
-        actionFallen->setText(QApplication::translate("MainWindow", "Fallen", 0, QApplication::UnicodeUTF8));
-        actionChojrak->setText(QApplication::translate("MainWindow", "chojrak", 0, QApplication::UnicodeUTF8));
-        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
-        menuEdit->setTitle(QApplication::translate("MainWindow", "Edit", 0, QApplication::UnicodeUTF8));
-        menuDelete->setTitle(QApplication::translate("MainWindow", "Delete", 0, QApplication::UnicodeUTF8));
-        menuAbout->setTitle(QApplication::translate("MainWindow", "About", 0, QApplication::UnicodeUTF8));
-        menuContact->setTitle(QApplication::translate("MainWindow", "Contact", 0, QApplication::UnicodeUTF8));
-        menuTools->setTitle(QApplication::translate("MainWindow", "Tools", 0, QApplication::UnicodeUTF8));
-        menuOpen_Tibia_Tools->setTitle(QApplication::translate("MainWindow", "Open Tibia Tools", 0, QApplication::UnicodeUTF8));
+        actionGoto_Line->setShortcut(QApplication::translate("MainWindow", "Ctrl+G", 0));
+        actionDebuger->setText(QApplication::translate("MainWindow", "Debuger", 0));
+        actionDebuger->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0));
+        actionOptions->setText(QApplication::translate("MainWindow", "Options", 0));
+        actionOptions->setShortcut(QApplication::translate("MainWindow", "Shift+O", 0));
+        actionQtLuaPad->setText(QApplication::translate("MainWindow", "About QtLuaPad", 0));
+        actionQtLuaPad->setShortcut(QApplication::translate("MainWindow", "Ctrl+Q", 0));
+        actionOtland->setText(QApplication::translate("MainWindow", "Otland", 0));
+        actionOtland->setShortcut(QApplication::translate("MainWindow", "Ctrl+I", 0));
+        actionQuest_Creator->setText(QApplication::translate("MainWindow", "Quest Creator", 0));
+        actionDelirium->setText(QApplication::translate("MainWindow", "Delirium", 0));
+        actionFallen->setText(QApplication::translate("MainWindow", "Fallen", 0));
+        actionChojrak->setText(QApplication::translate("MainWindow", "chojrak", 0));
+        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
+        menuEdit->setTitle(QApplication::translate("MainWindow", "Edit", 0));
+        menuDelete->setTitle(QApplication::translate("MainWindow", "Delete", 0));
+        menuAbout->setTitle(QApplication::translate("MainWindow", "About", 0));
+        menuContact->setTitle(QApplication::translate("MainWindow", "Contact", 0));
+        menuTools->setTitle(QApplication::translate("MainWindow", "Tools", 0));
+        menuOpen_Tibia_Tools->setTitle(QApplication::translate("MainWindow", "Open Tibia Tools", 0));
     } // retranslateUi
 
 };

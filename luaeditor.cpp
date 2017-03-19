@@ -2,9 +2,9 @@
 #include <QString>
 #include "Qsci/qsciapis.h"
 #include "definitions.h"
-
-#include <libxml/xmlmemory.h>
-#include <libxml/parser.h>
+#include "pugixml/pugixml.hpp"
+#include <QApplication>
+#include <QFileDialog>
 
 LuaEditor::LuaEditor()
 {
@@ -37,6 +37,7 @@ LuaEditor::LuaEditor()
 
 void LuaEditor::initLexer()
 {
+    using namespace pugi;
     lexer = new QsciLexerLua;
     lexer->setFoldCompact(false);
     lexer->setColor(QColor(128, 128, 255), 5);
@@ -64,8 +65,10 @@ void LuaEditor::initLexer()
         setAutoCompletionShowSingle(true);
 
         QsciAPIs *apis = new QsciAPIs(lexer);
-        xmlDocPtr doc = xmlParseFile(funcFile.toLatin1());
-        if(!doc)
+        pugi::xml_document doc;
+        auto res = doc.load_file(funcFile.toUtf8().data());
+
+        if(res.status != status_ok)
         {
             QMessageBox::critical(NULL, "Unable to load keywords!",
                                   tr("Could not load keywords file. No such file or directory."),
@@ -73,21 +76,20 @@ void LuaEditor::initLexer()
             return;
         }
 
-        xmlNodePtr root = xmlDocGetRootElement(doc);
-        if (xmlStrcmp(root->name, (const xmlChar*)"functions"))
+        if (std::string(doc.name()) != "functions")
         {
             QMessageBox::critical(NULL, "Error", tr("Malformed functions file."));
             return;
         }
-        for (xmlNodePtr p = root->children; p; p = p->next)
+        for (xml_node p = doc.first_child(); p; p = p.next_sibling())
         {
-            if(p->type != XML_ELEMENT_NODE)
+            if(p.type() != xml_node_type::node_element)
                 continue;
 
-            if(xmlStrcmp(p->name, (const xmlChar*)"function"))
+            if (std::string(p.name()) != "functions")
                 continue;
 
-            QString func = QString((const char*)p->children->content);
+            QString func = QString(p.child_value());
             apis->add(func);
         }
         apis->prepare();

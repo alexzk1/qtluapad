@@ -5,6 +5,11 @@
 #include "finddialog.h"
 #include "questcreator.h"
 #include "about.h"
+#include <QLabel>
+#include <QMdiArea>
+#include <QMdiSubWindow>
+#include <QInputDialog>
+#include <algorithm>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -23,13 +28,14 @@ MainWindow::MainWindow(QWidget *parent) :
     //Read MainWindow settings from registry.
     QSettings settings(ORGNAME, APPNAME);
     settings.beginGroup("QtLuaPad");
-    this->move(settings.value("pos").toPoint());
-    QSize s = settings.value("size").toSize();
 
-    if(s.width() == 1280 && s.height() == 962)
-        this->setWindowState(Qt::WindowMaximized);
-    else
-        this->resize(s);
+    QPoint tmp = settings.value("pos").toPoint();
+    tmp.setX(std::max(tmp.x(), 1));
+    tmp.setY(std::max(tmp.y(), 1));
+
+    this->move(tmp);
+    QSize s = settings.value("size").toSize();
+    this->resize(s);
 
     int view = settings.value("mdiview").toInt();
     (view == 1)? mdi->setViewMode(QMdiArea::TabbedView) : mdi->setViewMode(QMdiArea::SubWindowView);
@@ -100,23 +106,23 @@ void MainWindow::saveFile()
 
 void MainWindow::_openFile(QString file)
 {
-	QMdiSubWindow *w = getChildByPath(file);
-	if(w)
-	{
-		mdi->setActiveSubWindow(w);
-		return;
-	}
-	LuaEditor *editor = createMdiChild();
-	if(editor->openFile(file))
-	{
-		ui->statusBar->showMessage(tr("Loaded file: %1.").arg(file));
-		mdi->addSubWindow(editor);
-		mdi->setActiveSubWindow(qobject_cast<QMdiSubWindow*>(editor));
-		editor->showMaximized();
-	} else {
-		editor->close();
-	}
-	setWindowState(Qt::WindowMaximized);
+    QMdiSubWindow *w = getChildByPath(file);
+    if(w)
+    {
+        mdi->setActiveSubWindow(w);
+        return;
+    }
+    LuaEditor *editor = createMdiChild();
+    if(editor->openFile(file))
+    {
+        ui->statusBar->showMessage(tr("Loaded file: %1.").arg(file));
+        mdi->addSubWindow(editor);
+        mdi->setActiveSubWindow(qobject_cast<QMdiSubWindow*>(editor));
+        editor->showMaximized();
+    } else {
+        editor->close();
+    }
+    setWindowState(Qt::WindowMaximized);
 }
 
 void MainWindow::openFile()
@@ -362,8 +368,8 @@ void MainWindow::showFind()
 
 void MainWindow::on_actionQuest_Creator_triggered()
 {
-	QuestCreator *quest = new QuestCreator(this);
-	quest->show();
+    QuestCreator *quest = new QuestCreator(this);
+    quest->show();
 }
 
 void MainWindow::on_actionPrint_triggered()
@@ -401,7 +407,7 @@ void MainWindow::showGotoLine()
     if(mdi->subWindowList().count() > 0)
     {
         bool ok = false;
-        int ret = QInputDialog::getInteger(0, "Goto Line", "Enter a line number to goto:", 1, 1,
+        int ret = QInputDialog::getInt(0, "Goto Line", "Enter a line number to goto:", 1, 1,
                                            getActiveEditor()->lines(), 10, &ok);
         if(ok)
         {

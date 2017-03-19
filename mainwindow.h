@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include "luaeditor.h"
 
 namespace Ui {
@@ -40,7 +40,7 @@ protected:
     void closeEvent(QCloseEvent *event);
 
 public slots:
-	void _openFile(QString file);
+    void _openFile(QString file);
 
 private slots:
     void on_actionGoto_Line_triggered();

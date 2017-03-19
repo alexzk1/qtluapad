@@ -11,20 +11,20 @@
 #define UI_OPTIONS_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QFrame>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QRadioButton>
-#include <QtGui/QSpinBox>
-#include <QtGui/QToolButton>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QToolButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -163,30 +163,30 @@ public:
 
     void retranslateUi(QDialog *Options)
     {
-        Options->setWindowTitle(QApplication::translate("Options", "Options", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("Options", "Okay", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("Options", "Cancel", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Options", "MDI View Type:", 0, QApplication::UnicodeUTF8));
-        rdTabbedView->setText(QApplication::translate("Options", "Tabbed View", 0, QApplication::UnicodeUTF8));
-        rdWindowedView->setText(QApplication::translate("Options", "Windowed View", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("Options", "Programmer:", 0, QApplication::UnicodeUTF8));
-        cbWrap->setText(QApplication::translate("Options", "Enable Word-Wrap Code", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("Options", "Tab Width:", 0, QApplication::UnicodeUTF8));
-        cbBraceMatch->setText(QApplication::translate("Options", "Enable Brace Match", 0, QApplication::UnicodeUTF8));
-        cbCodeFolding->setText(QApplication::translate("Options", "Enable Code Folding", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("Options", "Application Style:", 0, QApplication::UnicodeUTF8));
+        Options->setWindowTitle(QApplication::translate("Options", "Options", 0));
+        pushButton->setText(QApplication::translate("Options", "Okay", 0));
+        pushButton_2->setText(QApplication::translate("Options", "Cancel", 0));
+        label->setText(QApplication::translate("Options", "MDI View Type:", 0));
+        rdTabbedView->setText(QApplication::translate("Options", "Tabbed View", 0));
+        rdWindowedView->setText(QApplication::translate("Options", "Windowed View", 0));
+        label_2->setText(QApplication::translate("Options", "Programmer:", 0));
+        cbWrap->setText(QApplication::translate("Options", "Enable Word-Wrap Code", 0));
+        label_3->setText(QApplication::translate("Options", "Tab Width:", 0));
+        cbBraceMatch->setText(QApplication::translate("Options", "Enable Brace Match", 0));
+        cbCodeFolding->setText(QApplication::translate("Options", "Enable Code Folding", 0));
+        label_4->setText(QApplication::translate("Options", "Application Style:", 0));
         comboStyle->clear();
         comboStyle->insertItems(0, QStringList()
-         << QApplication::translate("Options", "Windows", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("Options", "WindowsXP", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("Options", "WindowsVista", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("Options", "Plastique", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("Options", "Cleanlooks", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("Options", "Motif", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("Options", "Windows", 0)
+         << QApplication::translate("Options", "WindowsXP", 0)
+         << QApplication::translate("Options", "WindowsVista", 0)
+         << QApplication::translate("Options", "Plastique", 0)
+         << QApplication::translate("Options", "Cleanlooks", 0)
+         << QApplication::translate("Options", "Motif", 0)
         );
-        label_5->setText(QApplication::translate("Options", "Functions File:", 0, QApplication::UnicodeUTF8));
-        browseBtn->setText(QApplication::translate("Options", "...", 0, QApplication::UnicodeUTF8));
-        cbAutoComplete->setText(QApplication::translate("Options", "Enable Auto-Completion", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("Options", "Functions File:", 0));
+        browseBtn->setText(QApplication::translate("Options", "...", 0));
+        cbAutoComplete->setText(QApplication::translate("Options", "Enable Auto-Completion", 0));
     } // retranslateUi
 
 };

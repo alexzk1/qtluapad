@@ -11,19 +11,19 @@
 #define UI_QUESTCREATOR_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QGroupBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpinBox>
-#include <QtGui/QTreeWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QTreeWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -192,42 +192,42 @@ public:
 
     void retranslateUi(QDialog *QuestCreator)
     {
-        QuestCreator->setWindowTitle(QApplication::translate("QuestCreator", "Quest Creator", 0, QApplication::UnicodeUTF8));
-        XMLSetupGroup->setTitle(QApplication::translate("QuestCreator", "XML Setup", 0, QApplication::UnicodeUTF8));
-        ItemIDLabel->setText(QApplication::translate("QuestCreator", "Item ID:", 0, QApplication::UnicodeUTF8));
-        UIDLabel->setText(QApplication::translate("QuestCreator", "Unique ID:", 0, QApplication::UnicodeUTF8));
-        AIDLabel->setText(QApplication::translate("QuestCreator", "Action ID:", 0, QApplication::UnicodeUTF8));
-        FileNameLabel->setText(QApplication::translate("QuestCreator", "File name:", 0, QApplication::UnicodeUTF8));
-        SavePathLabel->setText(QApplication::translate("QuestCreator", "Save path:", 0, QApplication::UnicodeUTF8));
-        BrowsePathButton->setText(QApplication::translate("QuestCreator", "Browse...", 0, QApplication::UnicodeUTF8));
-        AssignMethodLabel->setText(QApplication::translate("QuestCreator", "Assign method:", 0, QApplication::UnicodeUTF8));
+        QuestCreator->setWindowTitle(QApplication::translate("QuestCreator", "Quest Creator", 0));
+        XMLSetupGroup->setTitle(QApplication::translate("QuestCreator", "XML Setup", 0));
+        ItemIDLabel->setText(QApplication::translate("QuestCreator", "Item ID:", 0));
+        UIDLabel->setText(QApplication::translate("QuestCreator", "Unique ID:", 0));
+        AIDLabel->setText(QApplication::translate("QuestCreator", "Action ID:", 0));
+        FileNameLabel->setText(QApplication::translate("QuestCreator", "File name:", 0));
+        SavePathLabel->setText(QApplication::translate("QuestCreator", "Save path:", 0));
+        BrowsePathButton->setText(QApplication::translate("QuestCreator", "Browse...", 0));
+        AssignMethodLabel->setText(QApplication::translate("QuestCreator", "Assign method:", 0));
         AssignMethodCombo->clear();
         AssignMethodCombo->insertItems(0, QStringList()
-         << QApplication::translate("QuestCreator", "Item ID", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("QuestCreator", "Action ID", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("QuestCreator", "Unique ID", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("QuestCreator", "Item ID", 0)
+         << QApplication::translate("QuestCreator", "Action ID", 0)
+         << QApplication::translate("QuestCreator", "Unique ID", 0)
         );
-        QuestSetupGroup->setTitle(QApplication::translate("QuestCreator", "Quest Setup", 0, QApplication::UnicodeUTF8));
-        StorageKeyLabel->setText(QApplication::translate("QuestCreator", "Storage key:", 0, QApplication::UnicodeUTF8));
-        SuccessMessageLabel->setText(QApplication::translate("QuestCreator", "Message on success:", 0, QApplication::UnicodeUTF8));
-        FailureMessageLabel->setText(QApplication::translate("QuestCreator", "Message on failure:", 0, QApplication::UnicodeUTF8));
-        ItemsInContainer->setText(QApplication::translate("QuestCreator", "Items in container?", 0, QApplication::UnicodeUTF8));
-        ContainerIDLabel->setText(QApplication::translate("QuestCreator", "Container ID:", 0, QApplication::UnicodeUTF8));
-        ContainerIDEdit->setText(QApplication::translate("QuestCreator", "1988", 0, QApplication::UnicodeUTF8));
-        ItemsListGroup->setTitle(QApplication::translate("QuestCreator", "Items", 0, QApplication::UnicodeUTF8));
+        QuestSetupGroup->setTitle(QApplication::translate("QuestCreator", "Quest Setup", 0));
+        StorageKeyLabel->setText(QApplication::translate("QuestCreator", "Storage key:", 0));
+        SuccessMessageLabel->setText(QApplication::translate("QuestCreator", "Message on success:", 0));
+        FailureMessageLabel->setText(QApplication::translate("QuestCreator", "Message on failure:", 0));
+        ItemsInContainer->setText(QApplication::translate("QuestCreator", "Items in container?", 0));
+        ContainerIDLabel->setText(QApplication::translate("QuestCreator", "Container ID:", 0));
+        ContainerIDEdit->setText(QApplication::translate("QuestCreator", "1988", 0));
+        ItemsListGroup->setTitle(QApplication::translate("QuestCreator", "Items", 0));
         QTreeWidgetItem *___qtreewidgetitem = ItemsList->headerItem();
-        ___qtreewidgetitem->setText(1, QApplication::translate("QuestCreator", "Count", 0, QApplication::UnicodeUTF8));
-        ___qtreewidgetitem->setText(0, QApplication::translate("QuestCreator", "ID", 0, QApplication::UnicodeUTF8));
-        ItemsClearList->setText(QApplication::translate("QuestCreator", "Clear List", 0, QApplication::UnicodeUTF8));
-        ItemsRemoveItem->setText(QApplication::translate("QuestCreator", "Remove Item", 0, QApplication::UnicodeUTF8));
-        ItemsAddItem->setText(QApplication::translate("QuestCreator", "Add Item", 0, QApplication::UnicodeUTF8));
-        ItemsAddID->setText(QApplication::translate("QuestCreator", "ID:", 0, QApplication::UnicodeUTF8));
-        ItemsAddCount->setText(QApplication::translate("QuestCreator", "Count:", 0, QApplication::UnicodeUTF8));
-        StorageKeyEdit->setText(QApplication::translate("QuestCreator", "1000", 0, QApplication::UnicodeUTF8));
-        SuccessMessageEdit->setText(QApplication::translate("QuestCreator", "You have found a secret reward.", 0, QApplication::UnicodeUTF8));
-        FailureMessageEdit->setText(QApplication::translate("QuestCreator", "It is empty.", 0, QApplication::UnicodeUTF8));
-        SaveQuestButton->setText(QApplication::translate("QuestCreator", "Save Quest", 0, QApplication::UnicodeUTF8));
-        CloseWindowButton->setText(QApplication::translate("QuestCreator", "Close Window", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem->setText(1, QApplication::translate("QuestCreator", "Count", 0));
+        ___qtreewidgetitem->setText(0, QApplication::translate("QuestCreator", "ID", 0));
+        ItemsClearList->setText(QApplication::translate("QuestCreator", "Clear List", 0));
+        ItemsRemoveItem->setText(QApplication::translate("QuestCreator", "Remove Item", 0));
+        ItemsAddItem->setText(QApplication::translate("QuestCreator", "Add Item", 0));
+        ItemsAddID->setText(QApplication::translate("QuestCreator", "ID:", 0));
+        ItemsAddCount->setText(QApplication::translate("QuestCreator", "Count:", 0));
+        StorageKeyEdit->setText(QApplication::translate("QuestCreator", "1000", 0));
+        SuccessMessageEdit->setText(QApplication::translate("QuestCreator", "You have found a secret reward.", 0));
+        FailureMessageEdit->setText(QApplication::translate("QuestCreator", "It is empty.", 0));
+        SaveQuestButton->setText(QApplication::translate("QuestCreator", "Save Quest", 0));
+        CloseWindowButton->setText(QApplication::translate("QuestCreator", "Close Window", 0));
     } // retranslateUi
 
 };
